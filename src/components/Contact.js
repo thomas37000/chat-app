@@ -1,18 +1,32 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './Components.css'
 
+function Contact() {
+  return (
+    <div className="Contact">
+      <img
+        className="avatar"
+        src="https://randomuser.me/api/portraits/men/34.jpg"
+        alt="Pierr Paul Jack"
+      />
+      <div>
+        <p className="name">Pierre Paul Jack</p>
+        <div className="status">
+          <div className="status-online" />
+          <p className="status-text">online</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/*
 const name = "PierrePaulJack"
 const avatar = "https://randomuser.me/api/portraits/men/34.jpg"
 const status = true
-
-/*
-function Contact() {
-    //let status = props.status-online ? 'status - Online' : "status - Offline";
-    
-}
 */
 
-
+/*
 class Contact extends Component {
     render() {
         return <div className="Contact">
@@ -29,6 +43,6 @@ class Contact extends Component {
       </div> 
     }   
 }
-
+*/
 
 export default Contact
