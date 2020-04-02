@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import './Components.css'
+import React, { Component } from 'react';
+import './Components.css';
 import PropTypes from 'prop-types';
 
 function Contact(props) {
@@ -28,4 +28,4 @@ Contact.proptTypes = {
   status: PropTypes.bool.isRequired
 }
 
-export default Contact
+export default Contact 
