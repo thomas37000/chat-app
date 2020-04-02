@@ -35,6 +35,9 @@ function UsersContact() {
         <ul>
             {
               users.map(member => <li Key={member}>{member}</li>)
+              users.map(member => <li Key={name}>{name}</li>)
+              users.map(member => <li Key={avatar}>{avatar}</li>)
+              users.map(member => <li Key={online}>{online}</li>)
             }
       </ul>
   );
