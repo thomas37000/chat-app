@@ -7,6 +7,10 @@
   align-items: center;
 }
 
+.Contact:hover {
+  background: #777;
+}
+
 /* Contact image */
 .Contact .avatar {
   border-radius: 50%;

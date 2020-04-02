@@ -1,48 +1,65 @@
-import React from 'react'
+import React, { Component } from 'react'
 import './Components.css'
+import PropTypes from 'prop-types';
 
-function Contact() {
+function Contact(props) {
+  
   return (
     <div className="Contact">
       <img
         className="avatar"
-        src="https://randomuser.me/api/portraits/men/34.jpg"
-        alt="Pierr Paul Jack"
+        src={props.avatar}
+        alt={props.name}
       />
       <div>
-        <p className="name">Pierre Paul Jack</p>
+        <p className="name">{props.name}</p>
         <div className="status">
-          <div className="status-online" />
-          <p className="status-text">online</p>
+          <div className={props.status ? "status-online" : "status-offline" } />
+          <p className="status-text">{props.status ? "online" : "offline" }</p>
         </div>
       </div>
     </div>
   );
 }
 
-/*
-const name = "PierrePaulJack"
-const avatar = "https://randomuser.me/api/portraits/men/34.jpg"
-const status = true
-*/
+Contact.proptTypes = {
+  name: PropTypes.string,
+  avatar: PropTypes.string,
+  status: PropTypes.bool}
 
-/*
-class Contact extends Component {
-    render() {
-        return <div className="Contact">
-        <img className="avatar" src={avatar} />
-        
-        <div>
-          <h4 className="name">{name}</h4>
-          <p className="status">
-              <button className="status-online"></button>
-              {status ? "Online" : "Offline"}
-         </p>
+/*const onOff = props => {
+    if (props.status ? "Online" : "Offline") {
+       return <div style={{backgroundColor:"#aed581"}}>
+         
+       </div>
+       } else {
+         return <div style={{backgroundColor:"#f4511"}}>
+
+         </div>
+      }
+   };*/
+
+  /* const isOnline = (props) => {
+    if (props.status) {
+      <div className={props.status-online} />
+    } else {
+      <div className={props.status-offline} />
+    }
+   };*/ 
+
+/*class Contact extends Component {
+  render() {
+    return <div className="Contact">
+      <img className="avatar" src={this.props.avatar} />
+      <div>
+        <p className="name">{this.props.name}</p>
+        <div className="status">
+          <div className="status-online" />
+          <p className="status-text">{this.props.status ? "Online" : "Offline"}</p>
         </div>
-        
-      </div> 
-    }   
-}
-*/
+      </div>
+    </div>
+  }
+}*/
 
 export default Contact
