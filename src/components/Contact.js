@@ -23,43 +23,9 @@ function Contact(props) {
 }
 
 Contact.proptTypes = {
-  name: PropTypes.string,
-  avatar: PropTypes.string,
-  status: PropTypes.bool}
-
-/*const onOff = props => {
-    if (props.status ? "Online" : "Offline") {
-       return <div style={{backgroundColor:"#aed581"}}>
-         
-       </div>
-       } else {
-         return <div style={{backgroundColor:"#f4511"}}>
-
-         </div>
-      }
-   };*/
-
-  /* const isOnline = (props) => {
-    if (props.status) {
-      <div className={props.status-online} />
-    } else {
-      <div className={props.status-offline} />
-    }
-   };*/ 
-
-/*class Contact extends Component {
-  render() {
-    return <div className="Contact">
-      <img className="avatar" src={this.props.avatar} />
-      <div>
-        <p className="name">{this.props.name}</p>
-        <div className="status">
-          <div className="status-online" />
-          <p className="status-text">{this.props.status ? "Online" : "Offline"}</p>
-        </div>
-      </div>
-    </div>
-  }
-}*/
+  name: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+  status: PropTypes.bool.isRequired
+}
 
 export default Contact
