@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component, useReducer } from 'react';
 import './App.css';
 import Contact from './components/Contact';
-//import UsersContact from './components/ContactList';
+import ContactList from './components/ContactList';
 
 class App extends Component {
+
   render() {
     return (
       <div className="App">
@@ -16,6 +17,7 @@ class App extends Component {
         <Contact name="wendy"
           avatar="https://randomuser.me/api/portraits/women/44.jpg"
           status />
+        <ContactList />
       </div>
     );
   }
