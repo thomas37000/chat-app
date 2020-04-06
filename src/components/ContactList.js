@@ -1,37 +1,29 @@
 import React, { Component } from 'react';
 import './Components.css';
-import PropTypes from 'prop-types';
 
+function ContactList({name, avatar, online}) {
+  
+    return (
+      <div className="Contact">
+        <img
+          className="avatar"
+          src={avatar}
+          alt={name}
+        />
+        <div>
+          <p className="name">{name}</p>
+          <div className="status">
+            <div className={online ? "status-online" : "status-offline" } />
+            <p className="status-text">{online ? "online" : "offline" }</p>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
-const users = [
-    {
-        name: 'Robert Reyes',
-        avatar: 'https://randomuser.me/api/portraits/men/28.jpg',
-        online: false
-    },
-    {
-        name: 'Nellie Caldwell',
-        avatar: 'https://randomuser.me/api/portraits/women/17.jpg',
-        online: true
-    },
-    {
-        name: 'Vernon Mason',
-        avatar: 'https://randomuser.me/api/portraits/men/84.jpg',
-        online: true
-    },
-    {
-        name: 'Erica Hunt',
-        avatar: 'https://randomuser.me/api/portraits/women/87.jpg',
-        online: false
-    },
-    {
-        name: 'Juanita Phillips',
-        avatar: 'https://randomuser.me/api/portraits/women/55.jpg',
-        online: true
-    }
-];
+  export default ContactList
 
-function ContactList() {
+  /*function ContactList() {
     return (
         <div className="Contact">
             <ul>{
@@ -49,13 +41,4 @@ function ContactList() {
             </ul>
         </div>
     );
-}
-
-ContactList.proptTypes = {
-    user: PropTypes.bool.isRequired,
-    name: PropTypes.string.isRequired,
-    avatar: PropTypes.string.isRequired,
-    status: PropTypes.bool.isRequired
-}
-
-export default ContactList
+}*/
