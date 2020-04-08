@@ -1,33 +1,37 @@
 import React, { Component, useReducer } from 'react';
 import './App.css';
-import ContactList from './components/ContactList';
-import PropTypes from 'prop-types';
+import Contact from './components/Contact';
 
 const users = [
   {
-      name: 'Robert Reyes',
-      avatar: 'https://randomuser.me/api/portraits/men/28.jpg',
-      online: false
+    name: 'Pierre Dupont',
+    avatar: 'https://randomuser.me/api/portraits/men/34.jpg',
+    online: true
   },
   {
-      name: 'Nellie Caldwell',
-      avatar: 'https://randomuser.me/api/portraits/women/17.jpg',
-      online: true
+    name: 'Paul Dubois',
+    avatar: "https://randomuser.me/api/portraits/men/2.jpg",
+    online: false
   },
   {
-      name: 'Vernon Mason',
-      avatar: 'https://randomuser.me/api/portraits/men/84.jpg',
-      online: true
+    name: 'Emilie Jolie',
+    avatar: "https://randomuser.me/api/portraits/women/44.jpg",
+    online: true
   },
   {
-      name: 'Erica Hunt',
-      avatar: 'https://randomuser.me/api/portraits/women/87.jpg',
-      online: false
+    name: 'Jack Dupiat',
+    avatar: 'https://randomuser.me/api/portraits/men/22.jpg',
+    online: true
   },
   {
-      name: 'Juanita Phillips',
-      avatar: 'https://randomuser.me/api/portraits/women/55.jpg',
-      online: true
+    name: 'Maximilien Laporte',
+    avatar: "https://randomuser.me/api/portraits/men/12.jpg",
+    online: false
+  },
+  {
+    name: 'Julie Poullarde',
+    avatar: "https://randomuser.me/api/portraits/women/32.jpg",
+    online: false
   }
 ];
 
@@ -37,7 +41,7 @@ class App extends Component {
     return (
       <div className="App">
         {users.map(user => (             
-          <ContactList {...user} />))}
+          <Contact {...user} />))}
       </div>
     );
   }
