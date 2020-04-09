@@ -23,8 +23,8 @@ class Contact extends Component {
           <p className="name">{this.props.name}</p>
 
           <button className="status" onClick={event => {
-            const newStatus = this.state.status;
-            this.setState({ status: true });
+            const newStatus = !this.state.status;
+            this.setState({ status: newStatus });
           }}>
             <div className={this.state.status ? "status-online" : "status-offline"} />
             <p className="status-text">{this.state.status ? "online" : "offline"}</p>
